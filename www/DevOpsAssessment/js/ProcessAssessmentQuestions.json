@@ -665,6 +665,33 @@
       ]
     },
     {
+      "Category": "Deployments",
+      "Question": "How many deployments do you do in a month across environments?",
+      "Description": "Provide an estimate of the number of release deployments that you do across your project environments in a month",
+      "Options": [
+        {
+          "0-10": {
+            "Rating": "0"
+          }
+        },
+        {
+          "10-20": {
+            "Rating": "0"
+          }
+        },
+        {
+          "20-30": {
+            "Rating": "0"
+          }
+        },
+        {
+          "30-50": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
       "Category": "Environments",
       "Question": "Do you use any tools for automating infrastructure builds for your application environments ?",
       "Description": "Application infrastructre build and provisioning is automated and is stored as code for repeatablity",
@@ -730,7 +757,7 @@
     },
     {
       "Category": "Environments",
-      "Question": "Do you use tools do you use for Environment Management?",
+      "Question": "Do you use tools for Environment Management?",
       "Description": "Ability to book, reserve and monitor environment utilisation",
       "Options": [
         {
