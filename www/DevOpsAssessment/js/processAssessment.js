@@ -227,7 +227,7 @@ $(document).ready(function () {
             }
             
            
-            if(OtherOption == "Other"){
+            if(OtherOption == "Others"){
              $("#OptionText").val('');   
                 
              window.location.href ="#openModal";
@@ -458,7 +458,7 @@ $(document).ready(function () {
 
 
 
-    var assesment = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
+    var assesment = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1, -1];
 
     var precentageVal = [];
     var a1 = 0; // result for part 1
@@ -480,7 +480,7 @@ $(document).ready(function () {
         // set count as one . same record will not be added again
         SessionCount = 1;
         insertProcessAssessmentData(AnswerOptions);
-        UpdateResultsProcessAssessment(localStorage.getItem('appName'), localStorage.getItem('serviceType'), localStorage.getItem('yourName'), localStorage.getItem('designation'));
+        UpdateResultsProcessAssessment(localStorage.getItem('appName'), localStorage.getItem('serviceType'), localStorage.getItem('yourName'), localStorage.getItem('designation'), localStorage.getItem('cioArea'));
         localStorage.setItem("ProcessAssessment", "Completed");
 
         alert("Successfully saved in the Database");
