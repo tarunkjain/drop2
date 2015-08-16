@@ -1,0 +1,128 @@
+{
+  "AssessmentQuestions": [
+    {
+      "Category": "Process",
+      "Question": "Q1: Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Option": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "Question": "Q1.1: What tool do you use for code versioning management?",
+            "Option": [
+              {
+                "GIT/STASH": {
+                  "Rating": "1",
+                  "Question": "Q1.1.1: Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                  "Option": [
+                    {
+                      "Yes": {
+                        "Rating": "1"
+                      }
+                    },
+                    {
+                      "No": {
+                        "Rating": ".25"
+                      }
+                    },
+                    {
+                      "Partially": {
+                        "Rating": ".5"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "SVN": {}
+              },
+              {
+                "Others": {}
+              }
+            ]
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": [
+              "Textarea"
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployments & Environments",
+      "Question": "Is the full audit trail for automated deployments across all tools in the chain? (e.g. Jira-> Jenkins -> Nolio-> JBoss)",
+      "Description": "Automated deployments are fully audited and the process documented through the toolset used through the deploymentchain.",
+      "Option": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "Question": "Q1.1: What tool do you use for code versioning management?",
+            "Option": [
+              {
+                "GIT/STASH": {
+                  "Rating": "1",
+                  "Question": "Q1.1.1: Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                  "Option": [
+                    {
+                      "Yes": {
+                        "Rating": "1"
+                      }
+                    },
+                    {
+                      "No": {
+                        "Rating": ".25"
+                      }
+                    },
+                    {
+                      "Partially": {
+                        "Rating": ".5"
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "SVN": {}
+              },
+              {
+                "Others": {}
+              }
+            ]
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": [
+              "Textarea"
+            ]
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+Do you use a fully automated continuous Integration process?
+Do development teams use automated testing procedures?
+Are your teams able to provide self-service, on-demand provisioning of all needed resources?
+Are deployments automated end-to-end across development, test and production?
+Does your release process include comprehensive auditing and reporting capabilities?
+Do you have complete visibility into all business transactions?
+Have you consolidated monitoring tools to shorten problem resolution times?
+Are teams able to correlate and analyze performance metrics to solve problems before they impact the end-user?

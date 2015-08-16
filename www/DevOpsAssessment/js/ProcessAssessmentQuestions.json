@@ -1,0 +1,836 @@
+{
+  "AssessmentQuestions": [
+    {
+      "Category": "Development",
+      "Question": "1. Do you manage code branch for each Project Work Request (PWR)?",
+      "Description": "\n  Every Project\n  Work Request has a version control branch associated with it so that there is\n  alignment between the technology that is undergoing a change request",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "2. Are code branches and code commits tagged & baselined so that all change requests are traceable?",
+      "Description": "\n  All\n  change requests are easily traceable via a simple dashboard which gives the\n  user a very transparent insight in to the release pipeline which enables to\n  point out build fails or errors easily and to have more control over the\n  applications and the deployments",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "3. Are the code artifacts published to a central repository?",
+      "Description": "\n  All the artifacts\n  are uploaded in a central repository which is easily accessible and also for\n  other contributors to easily update and sync the changes in seconds time",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "3.1. \n  Which tool do you\n  use?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "JIRA": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "3.1.1 \n  How do you rate\n  your code repository management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Good": {
+                            "Rating": "0.75"
+                          }
+                        },
+                        {
+                          "Okay": {
+                            "Rating": "0.5"
+                          }
+                        },
+                        {
+                          "Bad": {
+                            "Rating": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "3.2 \n  Where do you\n  manage/ store code artifacts?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "N/A": {
+                    "Rating": "0",
+                    "SubQuestion": {
+                      "Question": "3.2.1 \n  How do you rate\n  your code repository management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Good": {
+                            "Rating": "0.75"
+                          }
+                        },
+                        {
+                          "Okay": {
+                            "Rating": "0.5"
+                          }
+                        },
+                        {
+                          "Bad": {
+                            "Rating": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "\n  4. Is the\n  code requiring external compile/ run time dependencies pulled from a single\n  repository?",
+      "Description": "\n  All\n  the code streams which requires external compile or runtime dependencies are\n  able to retrieve from a central repository",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "4.1. \n  Which tool do you\n  use?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "Maven": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "4.1.1 \n  How do you rate\n  your code repository management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Good": {
+                            "Rating": "0.75"
+                          }
+                        },
+                        {
+                          "Okay": {
+                            "Rating": "0.5"
+                          }
+                        },
+                        {
+                          "Bad": {
+                            "Rating": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Ant": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "0"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "\n  5. Do you follow Test\n  or Behaviour Driven Development (TDD/ BDD) approach for high levels of code\n  coverage in testing?",
+      "Description": "\n  Development teams\n  follow Test-Driven Development and Behaviour-Driven Development demonstrating\n  which covers high levels of code coverage from unit testing to assembly\n  testing.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "\n  6. Are code releases\n  subject to a staged roll out and piloting phase?",
+      "Description": "\n  Releases done by\n  your team are deployed in stages including a pilot phase where it is not in\n  production.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "7. \n  Do you follow Test\n  or Behaviour Driven Development (TDD/ BDD) approach for high levels of code\n  coverage in testing?",
+      "Description": "\n  Development teams\n  follow Test-Driven Development and Behaviour-Driven Development demonstrating\n  which covers high levels of code coverage from unit testing to assembly\n  testing.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "8. \n  Is the development\n  environment (IDE, source code and server config) setup automated?",
+      "Description": "\n  Environment\n  provisioning  is an ideal state as it\n  allows users to focus on applying identical environment configurations by a\n  single click",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "9. \n  Are the code\n  streams continuously integrated (CI) for compilation, testing, packaging,\n  deployment?",
+      "Description": "help text",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "10. \n  How many\n  deployments do you do per month?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "0-5": {
+            "Rating": "1"
+          }
+        },
+        {
+          "5-10": {
+            "Rating": "0"
+          }
+        },
+        {
+          "15-30": {
+            "Rating": "0"
+          }
+        },
+        {
+          ">30": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "11. \n  Do you have\n  automated deployments for your application?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "12. \n  Are your\n  deployments traceable end to end?",
+      "Description": "\n  All\n  the actions are clearly traceable after deployment of the project using the\n  simple dashboard",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "13. \n  Are\n  deployments non-impacting and can take place during business hours?",
+      "Description": "\n  Releases\n  done by your team are deployed in stages including a pilot phase where it is\n  not in production.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "14. \n  Are\n  applications deployed Active-Active across DR and Production?",
+      "Description": "\n  Applications\n  are deployed under Single Machine High Availability across Disaster Recovery\n  and Production servers",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "15. \n  Are\n  alerting controls in place for all assets in the application and its boundary\n  points?",
+      "Description": "\n  Alerting\n  is enabled for asset availability within the application as well as for all\n  application boundaries",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "16. \n  Do you\n  follow a defined workflow for change management across environments?",
+      "Description": "\n  All\n  the change requests are tracked and managed using a JIRA workflow which is\n  used specifically to handle them",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "16.1 \n  What\n  tools do you use?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "Jira": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "16.1.1. \n  How do\n  you rate your change management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Good": {
+                            "Rating": "0.25"
+                          }
+                        },
+                        {
+                          "Poor": {
+                            "Rating": "0.5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "17. \n  Is the\n  new environment build/ change tracked and aligned to PWR?",
+      "Description": "\n  New\n  environment changes are easily managed using the environment provisioning\n  process and is tracked against a PWR.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "17.1 \n  What\n  tools do you use?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "Jira": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "17.1.1 \n  How do\n  you rate your change management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Good": {
+                            "Rating": "0.25"
+                          }
+                        },
+                        {
+                          "Poor": {
+                            "Rating": "0.5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "TeamCity": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Deployment",
+      "Question": "18. \n  New\n  Are environment changes easily managed using the environment provisioning\n  process and is tracked against a PWR.",
+      "Description": "\n  All\n  environments related to the system are aligned strategically to these major\n  market offerings: Platform-as-a-Service, Infrastructure-as-a-Service and\n  Software-as-a-Service.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "18.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "18.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": "0.25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": "0.5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "19. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "19.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "19.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": "0.25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": "0.5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "20. \n  Do you\n  have automated static code quality checks for your application?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "20.1. What tool do you use?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "SonarQube": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "20.1.1 \n  How do\n  you rate your code quality management process?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Excellent": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "Okay": {
+                            "Rating": "0.25"
+                          }
+                        },
+                        {
+                          "Poor": {
+                            "Rating": "0"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Other": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "21. \n  How many\n  deployments do you do per month?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "0-20": {
+            "Rating": "1"
+          }
+        },
+        {
+          "20-40": {
+            "Rating": "0.75"
+          }
+        },
+        {
+          "40-60": {
+            "Rating": "0.5"
+          }
+        },
+        {
+          ">60": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "22. \n  Are\n  automated failover testing in OAT in place to prove resiliency design for the\n  application?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0.5"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "23. \n  Are\n  automated failover testing in OAT in place to prove resiliency design for the\n  application?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0.5"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "24. \n  Is performance test\n  is automated?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "25. \n  Is performance test\n  done for every code change?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "26. \n  Is performance\n  monitoring in place to each automated test run with delta comparisons and\n  test failure based on thresholds?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0.5"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Quality Control",
+      "Question": "27. \n  Is penetration test automated?",
+      "Description": "Help text here",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1"
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    }
+  ]
+}
