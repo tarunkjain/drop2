@@ -59,6 +59,7 @@ $(document).ready(function() {
         localStorage.setItem('appName', apps);
 
         localStorage.setItem('yourName', $('#yourName').val());
+        localStorage.setItem('cioArea', $('#cioArea').val());
         localStorage.setItem('designation', $('#designation').val());
         localStorage.setItem('ProcessAssessment', "Incomplete");
         localStorage.setItem('ToolsAssessment', "Incomplete");

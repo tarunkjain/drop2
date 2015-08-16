@@ -77,7 +77,7 @@ function getPrecentageAss(assValue, categoryNum) {
     return (100 / allDataCount) * columnDataCount;
 }
 
-function UpdateResultsProcessAssessment(appName, serviceType, userName, userRole) {
+function UpdateResultsProcessAssessment(appName, serviceType, userName, userRole, cioArea) {
 
     var assessmentType = localStorage.assessment;
 
@@ -87,12 +87,14 @@ function UpdateResultsProcessAssessment(appName, serviceType, userName, userRole
     queryMaxRow = database.query("select max(@rid) from ProcessAssessment");
     var RowID = queryMaxRow.result[0].max;
 
-    queryResultUpdate = database.executeCommand("update ProcessAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
+    alert(cioArea);
+
+    queryResultUpdate = database.executeCommand("update ProcessAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "',cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
 
 
 }
 
-function UpdateResultsToolsAssessment(appName, serviceType, userName, userRole) {
+function UpdateResultsToolsAssessment(appName, serviceType, userName, userRole, cioArea) {
 
     var assessmentType = localStorage.assessment;
 
@@ -101,8 +103,9 @@ function UpdateResultsToolsAssessment(appName, serviceType, userName, userRole) 
 
     queryMaxRow = database.query("select max(@rid) from ToolsAssessment");
     var RowID = queryMaxRow.result[0].max;
+    alert(cioArea);
 
-    queryResultUpdate = database.executeCommand("update ToolsAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
+    queryResultUpdate = database.executeCommand("update ToolsAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "', cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
 
 }
 
