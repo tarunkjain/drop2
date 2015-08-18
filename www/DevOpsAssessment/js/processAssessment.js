@@ -1,5 +1,3 @@
-var QUESTION_ID_PREFIX = "ID_Q_";
-
 $(document).ready(function () {
 
 
@@ -38,9 +36,10 @@ $(document).ready(function () {
             if ($.inArray(question.Category, categories) === -1) {
                 categories.push(question.Category);
             }
-            questionIndex = addIds(question, questionIndex);
-
+            questionIndex = addIds(question, questionIndex, -1);
+            
         });
+        fixSubQuestionNext(data.AssessmentQuestions);
 
         // now need to build html
         buildCategoryLinks();
@@ -57,7 +56,7 @@ $(document).ready(function () {
 
 
     });
-
+    
     var x = 0;
     var ratings;
     var  arr  =  Array();
@@ -125,7 +124,6 @@ $(document).ready(function () {
             var questions = getQuestionsForCategories(category);
             //             console.log(questions.length);
             arrCategories.push((questions.length * 2));
-            console.log(arrCategories);
 
         });
 
@@ -165,7 +163,7 @@ $(document).ready(function () {
         var divIntro = $('<div class="intro">');
         div.append(divIntro);
 
-        divIntro.append('<img src="./Pictures/Build/picture1.png" height="150" width="135" style="padding-bottom: 20px;">');
+        divIntro.append('<img src="./Pictures/Build/Picture1.png" height="150" width="135" style="padding-bottom: 20px;">');
         divIntro.append('<h3>' + question.Question + '</h3>');
         divIntro.append('<button class="toggle"></button>');
         divIntro.append('<span class="more myfont">' + question.Description + '</span>');
@@ -394,24 +392,48 @@ $(document).ready(function () {
     /*
      * add simple ids to each question - these will be used a the slides index
      */
-    function addIds(question, questionIndex) {
+    function addIds(question, questionIndex, questionParent) {
         question.id = questionIndex;
+        question.parent = questionParent;
         questionMap[questionIndex] = question;
         questionIndex++;
-        if (typeof question.Options !== 'undefined') {
+        
+        if (attrExists(question.Options)) {
             $.each(question.Options, function (index, option) {
                 var optionValue = getKey(option);
-                if (typeof option[optionValue].SubQuestion !== 'undefined') {
-                    questionIndex = addIds(option[optionValue].SubQuestion, questionIndex);
+                if (attrExists( option[optionValue].SubQuestion)) {
+                	question.next = questionIndex;
+                    questionIndex = addIds(option[optionValue].SubQuestion, questionIndex, question.id);
                 }
             });
+            
         }
-        question.next = questionIndex;
+        
         return questionIndex;
 
     }
-
-
+    
+    /*
+     * Nasty hack to get around missing "next" question for the final sub-question option
+     */
+    function fixSubquestionNext(){
+    	for(i=0;i< Object.keys(questionMap).length; i++){
+    		var question = questionMap[i];
+    		console.log("Q: " + question.id + " -->"+!attrExists( question.next));
+    		if (!attrExists( question.next)) {
+    			// default set it to last question
+    			question.next = Object.keys(questionMap).length;
+    			// find next question without a parent
+    			for(j=question.id;j< Object.keys(questionMap).length; j++){
+    				if(questionMap[j].parent == -1){
+    					question.next = questionMap[j].id;
+    					break;
+    				}
+    			}
+            }
+        };	
+    }
+    
     function getKey(obj) {
         return Object.keys(obj)[0];
 
