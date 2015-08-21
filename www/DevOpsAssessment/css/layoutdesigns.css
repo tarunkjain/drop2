@@ -970,7 +970,7 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .quiz-sub-nav {
     width: 100%;
-    overflow: hidden;
+    /* overflow: hidden; */
     display: none
 }
 .quiz-sub-nav.sub-nav-fixed {
@@ -987,7 +987,7 @@ input[type=search]::-webkit-search-results-decoration {
     display: table;
     table-layout: fixed;
     text-align: center;
-    overflow: hidden
+    /* overflow: hidden */
 }
 .quiz-sub-nav .quiz-sub-nav-container .quiz-intro-item {
     position: relative;
@@ -1007,8 +1007,9 @@ input[type=search]::-webkit-search-results-decoration {
     background-color: #b4bebf;
     border-left: 2px solid #58676d;
     position: relative;
-    top: 16px;
-    left: 0
+    top: 10px;
+    left: 0;
+    height: 10px;
 }
 .quiz-sub-nav .quiz-sub-nav-container .quiz-intro-item .quiz-progress:hover {
     background-color: #9A9EA3
@@ -1030,15 +1031,16 @@ input[type=search]::-webkit-search-results-decoration {
 }
 .quiz-sub-nav .quiz-sub-nav-container .quiz-intro-link {
     display: block;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.6rem;
     font-family: 'Open Sans';
     color: #9ea6a8;
     text-decoration: none;
     font-weight: 500;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    height: 35px;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+    /* white-space: nowrap; */
 }
 .quiz-sub-nav .quiz-sub-nav-container .quiz-intro-link:hover {
     color: #9ea6a8

@@ -3,6 +3,8 @@
 <head>
     <script src="js/orientdb-api.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery.min.js"></script>
+    <script src="js/Chart.js"></script>
+
 </head>
 
 <body>
@@ -13,6 +15,7 @@
         $(document).ready(function () {
             addTable();
         });
+        
 
         function addTable() {
 
@@ -20,7 +23,10 @@
             var database = new ODatabase(dburi);
             databaseInfo = database.open('root', 'admin');
             var Dbresults = [];
-            queryResult1 = database.query("select * from ProcessAssessment");
+            //queryResult1 = database.query("select * from ProcessAssessment");
+            
+            queryResult1 = database.query("select ITService, cioArea, Applications, Date_Time, q1 as 'JIRA',q2 as 'JIRA_Maturity',q4 as 'Confluence',q5 as 'Confluence_Maturity',q7 as 'Sharepoint', q8 as 'Sharepoint_Maturity',q10 as 'GIT_Stash',q11 as 'GIT_Stash_Maturity',q13 as 'Jenkins',q14 as 'Jenkins_Maturity',q16 as 'STASH',q17 as 'Stash_Maturity',q19 as 'NexusPro',q20 as 'NexusPro_Maturity',q22 as 'Maven_Gradle',q23 as 'Maven_Maturity',q24 as 'Gradle_Maturity',q26 as 'DBMaestro',q27 as 'DBMaestro_Maturity', q29 as 'Nolio',q30 as 'Nolio_Maturity',q31 as 'Endevor_Maturity',q32 as 'NumberofDeployments',q34 as 'CHEF',q35 as 'CHEF_Maturity',q37 as 'Evolven',q38 as 'Evolven_Maturity',q40 as 'SonarQube',q41 as 'SonarQube_Maturity',q43 as 'Cucumber_Selenium_QTP',q44 as 'Cucumber_maturity',q45 as 'Selenium_Maturity',q46 as 'QTP_Maturity',q48 as 'HPQC_JIRA',q49 as 'HP_QC_Maturity',q50 as 'DEFECT_JIRA_Maturity',q52 as 'HPPerfCenter_LoadRunner',q53 as 'PerfCenter_Maturity',q54 as 'LoadRunner_Maturity',q56 as 'RIT',q57 as 'RIT_Maturity',q59 as 'Parasoft',q60 as 'Parasoft_Maturity',q62 as 'Actifio',q63 as 'Actifio_Maturity',q65 as 'RTView',q66 as 'RTVIew_Maturity',q68 as 'Azure',q69 as 'Azure_Maturity',q71 as 'SNOW',q72 as 'SNOW_Maturity' from ProcessAssessment");
+
             console.log(queryResult1);
             Dbresults = queryResult1.result;
             for (i = 0; i < Dbresults.length; i++) {
@@ -80,7 +86,6 @@
                 }
                 myTableDiv.appendChild(table);
            
-
         }
 
     </script>

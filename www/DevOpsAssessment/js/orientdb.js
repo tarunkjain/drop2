@@ -1,112 +1,62 @@
-var dburi = 'http://localhost:2480/DevOpsAssessment';
-var currentdate = new Date(); 
-var datetime =  currentdate.getDate() + "-"
-                + (currentdate.getMonth()+1)  + "-" 
-                + currentdate.getFullYear() + "  "  
-                + currentdate.getHours() + ":"  
-                + currentdate.getMinutes() + ":" 
-                + currentdate.getSeconds() ;
+var dburi = 'http://' + window.location.host + '/DevOpsAssessment';
+var currentdate = new Date();
+var datetime = currentdate.getDate() + "-" + (currentdate.getMonth() + 1) + "-" + currentdate.getFullYear() + "  " + currentdate.getHours() + ":"
+    + currentdate.getMinutes() + ":" + currentdate.getSeconds();
 
-function insertProcessAssessmentData(assesment) {
-    var database = new ODatabase(dburi);
-    databaseInfo = database.open('root', 'admin');
+function insertProcessAssessmentData(questionMap, onboarding, maturity, appName, serviceType, cioArea, userName, userRole) {
 
-    var values = "'";
-    var columnNames = "";
-    for (i = 1; i <= assesment.length; i++) {
-        columnNames += "q" + i + ",";
-         values += assesment[i - 1] + "','";
+  var database = new ODatabase(dburi);
+  databaseInfo = database.open('root', 'admin');
 
-    }
-    console.log(values);
-    values = values.substring(0, values.length - 2);
-    columnNames = columnNames.substring(0, columnNames.length - 1);
+  var values = "";
+  var columnNames = "";
 
-    console.log("insert into ProcessAssessment(" + columnNames + ") values ('" + values +"')");
-    
-    commandResult = database.executeCommand("insert into ProcessAssessment(" + columnNames + ") values (" + values +")");
+  $.each(questionMap, function(index, question) {
+    columnNames += "q" + question.id + ",";
+    values += question.score + ",";
+  });
 
-}
+  $.each(_.keys(onboarding), function(index, category) {
+    var categoryCleaned = category.replace(/[^a-z0-9\.]+/gi, "");
+    columnNames += "onboarding_" + categoryCleaned + ",";
+    values += onboarding[category] + ",";
+    columnNames += "maturity_" + categoryCleaned + ",";
+    values += maturity[category] + ",";
+  });
 
-function insertToolsAssessmentData(assesment) {
-    var database = new ODatabase(dburi);
-    databaseInfo = database.open('root', 'admin');
+  columnNames += "Date_Time, Applications, ITService, cioArea, Username, UserRole";
+  values += "'" + datetime + "', '" + appName + "', '"+ serviceType + "', '" + cioArea + "', '" + userName + "', '" + userRole + "'";
 
-    var values = "";
-    var columnNames = "";
-    for (i = 1; i <= 21; i++) {
-        columnNames += "q" + i + ",";
-        values += assesment[i - 1] + ",";
-    }
-
-    values = values.substring(0, values.length - 1);
-    columnNames = columnNames.substring(0, columnNames.length - 1);
-
-//    commandResult = database.executeCommand("insert into ToolsAssessment(" + columnNames + ") values ('" + values + "')");
-     commandResult = database.executeCommand("insert into ToolsAssessment(q1,q2,q3,q4,q5,q6,q7,q8,q9,q10,q11,q12,q13,q14,q15,q16,q17,q18,q19,q20,q21) values ('" +assesment[0]+"','" +assesment[1]+"','" +assesment[2]+"','" +assesment[3]+"','" +assesment[4]+"','" +assesment[5]+"','" +assesment[6]+"','" +assesment[7]+"','" +assesment[8]+"','" +assesment[9]+"','" +assesment[10]+"','" +assesment[11]+"','" +assesment[12]+"','" +assesment[13]+"','" +assesment[14]+"','" +assesment[15]+"','" +assesment[16]+"','" +assesment[17]+"','" +assesment[18]+"','" +assesment[19]+"','" +assesment[20]+"')");
-//        console.log(commandResult);
+  commandResult = database.executeCommand("insert into ProcessAssessment(" + columnNames + ") values (" + values + ")");
 
 }
 
+function UpdateResultsProcessAssessment(appName, serviceType, cioArea, userName, userRole) {
 
-//categoryNum = 0,1,2,3,4
-function getPrecentageAss(assValue, categoryNum) {
-    var database = new ODatabase(dburi);
-    databaseInfo = database.open('root', 'admin');
+  var assessmentType = localStorage.assessment;
 
-    var columnName = "";
+  var database = new ODatabase(dburi);
+  databaseInfo = database.open('root', 'admin');
 
-    if (categoryNum == 0) {
-        columnName = "a1"
-    } else if (categoryNum == 1) {
-        columnName = "a2"
-    } else if (categoryNum == 2) {
-        columnName = "a3"
-    } else if (categoryNum == 3) {
-        columnName = "a4"
-    } else if (categoryNum == 4) {
-        columnName = "a5"
-    }
+  queryMaxRow = database.query("select max(@rid) from ProcessAssessment");
+  var RowID = queryMaxRow.result[0].max;
 
-    queryResult1 = database.query("select count(*) from AssessmentResults");
-    queryResult2 = database.query("select count(" + columnName + ") from AssessmentResults where " + columnName + " = " + assValue + "");
-    var allDataCount = queryResult1.result[0].count;
-    var columnDataCount = queryResult2.result[0].count;
-
-
-    return (100 / allDataCount) * columnDataCount;
-}
-
-function UpdateResultsProcessAssessment(appName, serviceType, userName, userRole, cioArea) {
-
-    var assessmentType = localStorage.assessment;
-
-    var database = new ODatabase(dburi);
-    databaseInfo = database.open('root', 'admin');
-
-    queryMaxRow = database.query("select max(@rid) from ProcessAssessment");
-    var RowID = queryMaxRow.result[0].max;
-
-    alert(cioArea);
-
-    queryResultUpdate = database.executeCommand("update ProcessAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "',cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
-
+  queryResultUpdate = database.executeCommand("update ProcessAssessment set Date_Time ='" + datetime + "', Applications='" + appName + "', ITService='"
+      + serviceType + "', cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
 
 }
 
-function UpdateResultsToolsAssessment(appName, serviceType, userName, userRole, cioArea) {
+function UpdateResultsToolsAssessment(appName, serviceType, cioArea, userName, userRole) {
 
-    var assessmentType = localStorage.assessment;
+  var assessmentType = localStorage.assessment;
 
-    var database = new ODatabase(dburi);
-    databaseInfo = database.open('root', 'admin');
+  var database = new ODatabase(dburi);
+  databaseInfo = database.open('root', 'admin');
 
-    queryMaxRow = database.query("select max(@rid) from ToolsAssessment");
-    var RowID = queryMaxRow.result[0].max;
-    alert(cioArea);
+  queryMaxRow = database.query("select max(@rid) from ToolsAssessment");
+  var RowID = queryMaxRow.result[0].max;
 
-    queryResultUpdate = database.executeCommand("update ToolsAssessment set Date_Time ='"+datetime+"', Applications='" + appName + "', ITService='" + serviceType + "', cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
+  queryResultUpdate = database.executeCommand("update ToolsAssessment set Date_Time ='" + datetime + "', Applications='" + appName + "', ITService='"
+      + serviceType + "', cioArea='" + cioArea + "', Username='" + userName + "', UserRole='" + userRole + "' UPSERT WHERE @rid= " + RowID + "");
 
 }
-
-

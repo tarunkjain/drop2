@@ -1,7 +1,7 @@
 {
   "AssessmentQuestions": [
     {
-      "Category": "Project Management and Planning",
+      "Category": "Project Management & Planning",
       "Question": " Do you use any tools to gather and capture requirements for Project Planning and Management?",
       "Description": " All requirements for development ( New functionality, Change Requests and Production fixes are captured centrally and accessible to all project managers and team memebers",
       "Options": [
@@ -44,11 +44,6 @@
                   }
                 },
                 {
-                  "Sharepoint": {
-                    "Rating": "0"
-                  }
-                },
-                {
                   "Others": {
                     "Rating": "0"
                   }
@@ -65,9 +60,9 @@
       ]
     },
     {
-      "Category": "Project Management and Planning",
-      "Question": " Do you use any tools for collaboration and documentation?",
-      "Description": " All documentation is stored centrally and is accessible to project team members and stakeholders",
+      "Category": "Project Management & Planning",
+      "Question": " Do you use any tools for collaboration?",
+      "Description": " Team members use a Wiki space for collaborating idea's, views, to discuss plans and designs or issues",
       "Options": [
         {
           "Yes": {
@@ -107,6 +102,34 @@
                     }
                   }
                 },
+                {
+                  "Others": {
+                    "Rating": "0"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Project Management & Planning",
+      "Question": " Do you use any tools for storing project documentation?",
+      "Description": " All documentation is stored centrally and is accessible to project team members and stakeholders",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": " \n  Which tool do you\n  use?",
+              "Description": "Do you use any BACL tool for Collaboration and Documentation?",
+              "Options": [
                 {
                   "Sharepoint": {
                     "Rating": "1",
@@ -220,7 +243,7 @@
     },
     {
       "Category": "Development",
-      "Question": " Do you use any tools for automated code compilation, unit testing and packaging?",
+      "Question": " Do you use any tools for Continuous Integration (automated code compilation, unit testing and packaging)?",
       "Description": "Code compilation, unit testing and packaging is automated using tools like Jenkins and maven/gradle/ant",
       "Options": [
         {
@@ -507,7 +530,7 @@
     },
     {
       "Category": "Development",
-      "Question": " Do you use any tools for Database deployments, Continuous Integration?",
+      "Question": " Do you use any tools for Database deployments, Database Code Continuous Integration?",
       "Description": "Database Deployment, Continuous Integration are automated and fully traceable using a tool",
       "Options": [
         {
@@ -1265,70 +1288,6 @@
     },
     {
       "Category": "Quality & Test Management",
-      "Question": "Do you use any tools for Performance testing?",
-      "Description": "Performance per release is tested using a approved toolset",
-      "Options": [
-        {
-          "Yes": {
-            "Rating": "1",
-            "SubQuestion": {
-              "Question": " \n  Which tool do you\n  use?",
-              "Description": "Do you use any BACL tool for Integration testing?",
-              "Options": [
-                {
-                  "Rational Integration Tester": {
-                    "Rating": "1",
-                    "SubQuestion": {
-                      "Question": "\n  What is the level of integration of this tool with the other tools you use for project development and delivery phases?",
-                      "Description": "",
-                      "Options": [
-                        {
-                          "Fully": {
-                            "Rating": "3"
-                          }
-                        },
-                        {
-                          "Good": {
-                            "Rating": "2"
-                          }
-                        },
-                        {
-                          "Partial": {
-                            "Rating": "1"
-                          }
-                        },
-                        {
-                          "None": {
-                            "Rating": "0"
-                          }
-                        }
-                      ]
-                    }
-                  }
-                },
-                {
-                  "Others": {
-                    "Rating": "0"
-                  }
-                }
-              ]
-            }
-          }
-        },
-        {
-          "No": {
-            "Rating": "0"
-          }
-        },
-        {
-          "N/A": {
-            "Rating": "0"
-          }
-        }
-      ]
-    },
-    {
-      "Category": "Quality & Test Management",
       "Question": "Do you use any tools for Service Virtualisation ( using virtual backend services instead of actual systems during early testing phases) ?",
       "Description": "Early E2E Testing is carried out using integrations with virtual backend services instead of actual systems ",
       "Options": [
@@ -1499,6 +1458,39 @@
                   }
                 },
                 {
+                  "Others": {
+                    "Rating": "0"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Monitoring",
+      "Question": "Do you use any tools for Dashboarding the performance and availability your application environments?",
+      "Description": "Application environments  events are available in a Dashboard to identify trends in performance nad availability patterns ",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": " \n  Which tool do you\n  use?",
+              "Description": "Do you use any BACL tool for Monitoring application environments?",
+              "Options": [
+                {
                   "Azure": {
                     "Rating": "1",
                     "SubQuestion": {
@@ -1563,7 +1555,7 @@
               "Description": "Do you use any BACL tool for change management for releases to controlled environment?",
               "Options": [
                 {
-                  "Service Now": {
+                  "ServiceNow": {
                     "Rating": "1",
                     "SubQuestion": {
                       "Question": "\n  What is the level of integration of this tool with the other tools you use for project development and delivery phases?",
