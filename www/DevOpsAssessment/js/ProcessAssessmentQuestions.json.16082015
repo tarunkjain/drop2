@@ -1,0 +1,394 @@
+{
+  "AssessmentQuestions": [
+    {
+      "Category": "Process",
+      "Question": "1. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "1.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "1.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Development",
+      "Question": "2. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "2.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "2.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "PRovisioning",
+      "Question": "2. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "2.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "2.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Environemtns",
+      "Question": "2. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "2.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "2.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Environemtns",
+      "Question": "2. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "2.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "2.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    },
+    {
+      "Category": "Monitoring",
+      "Question": "2. Do you have code versioning for your project's code development?",
+      "Description": "Change introduced during development process is tracked and monitored throughout the set of devops tools implemented in the project.",
+      "Options": [
+        {
+          "Yes": {
+            "Rating": "1",
+            "SubQuestion": {
+              "Question": "2.1. What tool do you use for code versioning management?",
+              "Description": " Sub q desc.",
+              "Options": [
+                {
+                  "GIT/STASH": {
+                    "Rating": "1",
+                    "SubQuestion": {
+                      "Question": "2.1.1 Is your project Code repository integrated with the Project Managment tool for development traceability?",
+                      "Description": " Sub q desc.",
+                      "Options": [
+                        {
+                          "Yes": {
+                            "Rating": "1"
+                          }
+                        },
+                        {
+                          "No": {
+                            "Rating": ".25"
+                          }
+                        },
+                        {
+                          "Partially": {
+                            "Rating": ".5"
+                          }
+                        }
+                      ]
+                    }
+                  }
+                },
+                {
+                  "SVN": {
+                    "Rating": "1"
+                  }
+                },
+                {
+                  "Others": {
+                    "Rating": "1"
+                  }
+                }
+              ]
+            }
+          }
+        },
+        {
+          "No": {
+            "Rating": "0"
+          }
+        },
+        {
+          "N/A": {
+            "Rating": "0",
+            "Comments?": "Textarea"
+          }
+        }
+      ]
+    }
+  ]
+}
